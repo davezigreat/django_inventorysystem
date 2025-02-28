@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     'crispy_bootstrap4',
 ]
 
+LOGOUT_REDIRECT_URL = '/'
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -130,6 +133,10 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / "static"]
 
 STATIC_ROOT = (BASE_DIR/"asert/")
+
+LOGIN_REDIRECT_URL = 'dashboard-index.html'
+
+LOGOUT_REDIRECT_URL = '/logout/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

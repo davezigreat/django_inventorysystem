@@ -9,7 +9,7 @@ def register(request):
         form = CreateUserForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('dashboard-index')
+            return redirect('dashboard-index.html')
             #dapat naka mix gjud na password ng characters
     else:
         form = CreateUserForm()
@@ -17,3 +17,4 @@ def register(request):
         'form': form, 
     }
     return render(request, 'user/register.html', context)
+
